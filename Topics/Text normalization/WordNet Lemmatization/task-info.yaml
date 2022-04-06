@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from nltk.stem import WordNetLemmatizer
+
+
+    # your code here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10460#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 05 Apr 2022 15:15:12 UTC
+record: -1

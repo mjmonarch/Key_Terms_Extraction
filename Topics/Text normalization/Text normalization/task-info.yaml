@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Find cognate words
+- text: Determine part of speech of the word
+- text: Count all instances of each word in the text
+- text: Transform different forms of one word to one single form
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10452#comment
+status: Solved
+record: -1
