@@ -461,6 +461,30 @@ files:
     if __name__ == '__main__':
         KTETest().run_tests()
   learner_created: false
-feedback_link: https://hyperskill.org/projects/166/stages/863/implement#comment
-status: Unchecked
-record: -1
+- name: test.py
+  visible: true
+  text: |-
+    from sklearn.feature_extraction.text import TfidfVectorizer
+
+    dataset = ["Load up on guns, bring your friends",
+               "It's fun to lose and to pretend",
+               "She's over-bored and self-assured",
+               "Oh no, I know a dirty word",
+               "Hello"]
+
+    vectorizer = TfidfVectorizer()
+    weighted_matrix = vectorizer.fit_transform(dataset)
+    terms = vectorizer.get_feature_names()
+
+    # your code here
+  learner_created: true
+- name: test.xml
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/12372#comment
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
+    Academy</a> to continue learning.
+  time: Fri, 08 Apr 2022 11:24:43 UTC
+record: 4

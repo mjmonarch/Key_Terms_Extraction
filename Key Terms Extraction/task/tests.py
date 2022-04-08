@@ -3,16 +3,22 @@ from hstest.test_case import TestCase
 from hstest.check_result import CheckResult
 from test.news import news_text
 
-answer = {'Brain Disconnects During Sleep:': ["sleep", "cortex", "consciousness", "say", "tononi"],
-          'New Portuguese skull may be an early relative of Neandertals:': ["skull", "neandertal", "fossil", "europe", "year" ],
-          'Living by the coast could improve mental health:': ["health", "mental", "coast", "research", "people"],
-          'Did you knowingly commit a crime? Brain scans could tell:': ["brain", "people", "say", "study", "wa"],
-          'Computer learns to detect skin cancer more accurately than doctors:': ["dermatologist", "skin", "melanoma", "year", "cnn"],
-          'US economic growth stronger than expected despite weak demand:': ["u", "quarter", "ha", "year", "since"],
-          'Microsoft becomes third listed US firm to be valued at $1tn:': ["microsoft", "share", "cloud", "market", "ha" ],
-          "Apple's Siri is a better rapper than you:": ["'s", "siri", "like", "young", "wa"],
-          'Netflix viewers like comedy for breakfast and drama at lunch:': ["viewing", "netflix", "show", "said", "day"],
-          'Loneliness May Make Quitting Smoking Even Tougher:': ["smoking", "people", "loneliness", "study", "smoke"]}
+answer = {'Brain Disconnects During Sleep:': ["sleep", "cortex", "consciousness", "tononi", "tm"],
+          'New Portuguese skull may be an early relative of Neandertals:': ["skull", "fossil", "europe", "trait",
+                                                                            "genus"],
+          'Living by the coast could improve mental health:': ["health", "coast", "mental", "living", "household"],
+          'Did you knowingly commit a crime? Brain scans could tell:': ["brain", "suitcase", "study", "security",
+                                                                        "scenario"],
+          'Computer learns to detect skin cancer more accurately than doctors:': ["dermatologist", "skin", "melanoma",
+                                                                                  "cnn", "lesion"],
+          'US economic growth stronger than expected despite weak demand:': ["rate", "growth", "quarter", "economy",
+                                                                             "investment"],
+          'Microsoft becomes third listed US firm to be valued at $1tn:': ["microsoft", "share", "cloud", "market",
+                                                                           "company"],
+          "Apple's Siri is a better rapper than you:": ["siri", "rhyme", "smooth", "rizzo", "producer"],
+          'Netflix viewers like comedy for breakfast and drama at lunch:': ["netflix", "day", "comedy", "viewer", "tv"],
+          'Loneliness May Make Quitting Smoking Even Tougher:': ["smoking", "loneliness", "smoke", "quit", "lead"]}
+
 
 class KTETest(StageTest):
     def generate(self):
@@ -22,14 +28,14 @@ class KTETest(StageTest):
 
     def check(self, reply, attach):
         lines = reply.split('\n')
-        while("" in lines):
+        while ("" in lines):
             lines.remove("")
         headers = lines[::2]
         text = lines[1::2]
         news_text = []
         for row in text:
             row = row.split(' ')
-            while("" in row):
+            while ("" in row):
                 row.remove("")
             news_text.append(row)
         news = {}
@@ -44,16 +50,17 @@ class KTETest(StageTest):
         ans = list(answer.items())
         new = list(news.items())
         for i in range(len(ans)):
-
+            # лучше добавить ту же проверку, что и в первой стадии
             if len(answer) != len(news):
-                return CheckResult.wrong(feedback="Something is wrong with output. Probably, you have forgotten to print some news? Try again")
-
-            if ans[i][1] != new[i][1]:
+                return CheckResult.wrong(
+                    feedback="Something is wrong with output. Probably, you have forgotten to print some news? Try again")
+            if set(ans[i][1]) != set(new[i][1]):
                 wrong_news.append(new[i][0])
             if ans[i][0] != new[i][0]:
                 wrong_head.append(new[i][0])
         if len(answer) != len(news):
-            return CheckResult.wrong(feedback="Something is wrong with output. Probably, you have forgotten to print some news? Try again")
+            return CheckResult.wrong(
+                feedback="Something is wrong with output. Probably, you have forgotten to print some news? Try again")
         if len(wrong_head) != 0:
             return CheckResult.wrong(
                 feedback='Incorrect headers are found in your output. \n'
@@ -66,6 +73,6 @@ class KTETest(StageTest):
 
         return CheckResult.correct()
 
+
 if __name__ == '__main__':
     KTETest().run_tests()
-

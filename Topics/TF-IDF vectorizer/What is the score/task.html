@@ -1,0 +1,20 @@
+<h2>What is the score?</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Use the code below, print the final matrix, and put the score (<strong>TF-IDF only</strong>) for the last document in the answer box. Use the IDE to solve the task.</p> 
+  <pre><code class="language-python">from sklearn.feature_extraction.text import TfidfVectorizer
+
+dataset = ["Load up on guns, bring your friends",
+           "It's fun to lose and to pretend",
+           "She's over-bored and self-assured",
+           "Oh no, I know a dirty word",
+           "Hello"]
+
+vectorizer = TfidfVectorizer()
+weighted_matrix = vectorizer.fit_transform(dataset)
+terms = vectorizer.get_feature_names()
+
+# your code here</code></pre>
+ </body>
+</html>

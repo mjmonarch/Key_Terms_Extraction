@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF8'?>
+<data>
+  <corpus>
+    <news>
+      <value name="head">Brain Disconnects During Sleep</value>
+      <value name="text">Scientists may have gained an important insight into the age-old mystery of why consciousness fades as we nod off to sleep.
+          Lines of communication between various parts of cerebral cortex - which buzz with activity during wakefulness - break down during slumber, researchers report today in Science.
+          Early neuroscientists assumed that consciousness wanes during sleep because the cortex simply shuts off.
+          But electroencephalography (EEG) and other modern methods have since ruled out that explanation, showing that the electrical chatter and metabolism of neurons in the cortex continues unabated during sleep.
+          That left neuroscientists with a puzzle: If the brain is still active, why does consciousness wane?
+          Giulio Tononi of the University of Wisconsin, Madison, suspected that a communication breakdown might be the reason.
+          Tononi has spent years developing a theory that equates consciousness with the integration of information.
+          Communication between regions of the cortex might be one sign of this integration - and of consciousness, Tononi says.
+          To test that idea, he and his team recorded electrical activity in the brains of six sleepy volunteers using high density EEG.</value>
+    </news>
+    <news>
+      <value name="head">New Portuguese skull may be an early relative of Neandertals</value>
+      <value name="text">Half a million years ago, several different members of our genus, Homo, had spread throughout Europe and Asia, where some would eventually evolve into Neandertals.
+          But which ones has been the subject of intense debate.
+          A newly discovered partial skull is offering another clue to help solve the mystery of the ancestry of Neandertals.
+          Found in 2014 in the Gruta da Aroeira cave in central Portugal with ancient stone hand axes, the skull (3D reconstruction pictured) is firmly dated to 400,000 years old and an archaic member of our genus, according to a study published today in the Proceedings of the National Academy of Sciences.
+          The skull shows a new mix of features not seen before in fossil humans-it has traits that link it to Neandertals, such as a fused brow ridge, as well as some primitive traits that resemble other extinct fossils in Europe.
+          This new combination of features on a well-dated skull may help researchers sort out how different fossils in Europe are related to each other-and which ones eventually evolved into Neandertals.</value>
+    </news>
+  </corpus>
+</data>

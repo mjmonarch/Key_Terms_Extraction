@@ -454,9 +454,9 @@ files:
         KTETest().run_tests()
 
   learner_created: false
-feedback_link: https://hyperskill.org/projects/166/stages/861/implement#comment
+feedback_link: https://hyperskill.org/learn/step/12370#comment
 status: Solved
 feedback:
   message: Congratulations!
   time: Wed, 06 Apr 2022 05:50:33 UTC
-record: -1
+record: 2

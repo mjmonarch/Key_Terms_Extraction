@@ -460,6 +460,12 @@ files:
     </data>
     """
   learner_created: false
-feedback_link: https://hyperskill.org/projects/166/stages/862/implement#comment
-status: Unchecked
-record: -1
+- name: test.py
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/12371#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Wed, 06 Apr 2022 09:57:49 UTC
+record: 3
